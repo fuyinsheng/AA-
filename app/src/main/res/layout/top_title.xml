@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
      android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="37dp"
     android:background="@drawable/bg_title">
     <TextView
         android:id="@+id/tvTopTitle"
@@ -9,6 +9,8 @@
         android:layout_height="wrap_content"
         android:text="@string/tvTopTitle"
         android:layout_alignParentLeft="true"
+        android:paddingLeft="10dp"
+        android:layout_centerVertical="true"
         android:textColor="@color/black"/>
 
 </RelativeLayout>

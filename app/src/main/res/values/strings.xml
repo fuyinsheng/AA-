@@ -1,4 +1,21 @@
 <resources>
     <string name="app_name">GoAduch</string>
     <string name="tvTopTitle">AA费用小助手</string>
+    <string name="Welcomeinfo">欢迎来到AA费用小助手</string>
+
+    <string name="appGridTextPayoutAdd">记录消费</string>
+    <string name="appGridTextPayoutManager">查询消费</string>
+    <string name="appGridTextStatisticsManager">统计消费</string>
+    <string name="appGridTextAccountBookManager">账本管理</string>
+    <string name="appGridTextCategoryManager">类别管理</string>
+    <string name="appGridTextUserManage">人员管理</string>
+
+
+
+    <string-array name="slidemenu_activity_main">
+    <item>软件帮助</item>
+    <item>关于软件</item>
+    <item>建议反馈</item>
+    <item>软件更新</item>
+    </string-array>
 </resources>
