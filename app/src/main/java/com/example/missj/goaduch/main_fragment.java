@@ -3,12 +3,11 @@ package com.example.missj.goaduch;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 
 import com.example.missj.goaduch.com.example.missj.Adapter.AdaperAppGrid;
 
@@ -27,20 +26,26 @@ public class main_fragment extends Fragment {
        v= inflater.inflate(R.layout.fragment_main, container,false);
        AppendMainBody(R.layout.main_body);
 
-       InitVarible();
+/*       InitVarible();
        InitView();
        InitListeners();
-       BindData();
+       BindData();*/
 
        return  v;
 
     }
 protected  void AppendMainBody(int pResId)
 {
-    LinearLayout _MainBody = (LinearLayout)v.findViewById(R.id.layMainBody);
-    View _View = LayoutInflater.from(getActivity()).inflate(pResId, null);
-    RelativeLayout.LayoutParams _LayoutParams  = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT,RelativeLayout.LayoutParams.MATCH_PARENT);
-    _MainBody.addView(_View,_LayoutParams);
+    FragmentManager fm = getActivity().getSupportFragmentManager();
+    Fragment  mFragment =  fm.findFragmentById(R.id.layMainBody);
+    if(mFragment == null)
+    {
+        mFragment =new MainBodyFragment();
+        fm.beginTransaction().add(R.id.layMainBody, mFragment)
+                .commit();
+
+
+    }
 }
 public  void InitView()
 {
@@ -49,7 +54,7 @@ public  void InitView()
 }
 public  void InitVarible()
 {
-    mAdaperAppGrid = new AdaperAppGrid(getActivity());
+    mAdaperAppGrid = new AdaperAppGrid(getContext());
 
 }
 public  void BindData()
