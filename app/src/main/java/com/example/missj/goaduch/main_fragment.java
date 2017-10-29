@@ -15,7 +15,7 @@ import com.example.missj.goaduch.com.example.missj.Adapter.AdaperAppGrid;
  * Created by miss.j on 2017/10/28.
  */
 
-public class main_fragment extends Fragment {
+public class main_fragment extends FrameBase {
     View v;
     private GridView gvAppGrid;
     private AdaperAppGrid mAdaperAppGrid;
@@ -34,19 +34,7 @@ public class main_fragment extends Fragment {
        return  v;
 
     }
-protected  void AppendMainBody(int pResId)
-{
-    FragmentManager fm = getActivity().getSupportFragmentManager();
-    Fragment  mFragment =  fm.findFragmentById(R.id.layMainBody);
-    if(mFragment == null)
-    {
-        mFragment =new MainBodyFragment();
-        fm.beginTransaction().add(R.id.layMainBody, mFragment)
-                .commit();
 
-
-    }
-}
 public  void InitView()
 {
     gvAppGrid = (GridView)v.findViewById(R.id.gvAppGird);

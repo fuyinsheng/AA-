@@ -7,14 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.Toast;
 
 import com.example.missj.goaduch.com.example.missj.Adapter.AdaperAppGrid;
+import com.example.missj.goaduch.com.example.missj.control.SliderMenuItem;
+import com.example.missj.goaduch.com.example.missj.control.SliderMenuView;
 
 /**
  * Created by miss.j on 2017/10/28.
  */
 
-public class MainBodyFragment extends Fragment {
+public class MainBodyFragment extends FrameBase implements SliderMenuView.OnSlideMenuListenner {
     View v;
     private GridView gvAppGrid;
     private AdaperAppGrid mAdaperAppGrid;
@@ -27,6 +30,7 @@ public class MainBodyFragment extends Fragment {
        InitView();
        InitListeners();
        BindData();
+       CreateSlideMenu(R.array.SlideMenuActivityMain);
         return  v;
     }
 
@@ -47,5 +51,10 @@ public class MainBodyFragment extends Fragment {
     public  void InitListeners()
     {
 
+    }
+
+    @Override
+    public void onSlidMenuItemClick(View pView, SliderMenuItem pSlideMenuItemClick) {
+        Toast.makeText(getActivity(), pSlideMenuItemClick.getTitle(),Toast.LENGTH_SHORT).show();
     }
 }
