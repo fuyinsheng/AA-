@@ -24,7 +24,7 @@ public class main_fragment extends FrameBase {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
        v= inflater.inflate(R.layout.fragment_main, container,false);
-       AppendMainBody(R.layout.main_body);
+       AppendFragment(MAINBODY);
 
 /*       InitVarible();
        InitView();
