@@ -1,8 +1,9 @@
 package com.example.missj.goaduch;
 
 import android.support.v4.app.Fragment;
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
+
+import com.example.missj.goaduch.com.example.missj.fragment.SingleFragmentActivity;
+import com.example.missj.goaduch.com.example.missj.fragment.main_fragment;
 
 public class MainActivity extends SingleFragmentActivity {
 

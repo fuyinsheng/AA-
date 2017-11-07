@@ -1,5 +1,6 @@
 package com.example.missj.goaduch.com.example.missj.business;
 
+import android.content.ContentValues;
 import android.content.Context;
 
 import com.example.missj.goaduch.com.example.missj.model.ModelUser;
@@ -31,7 +32,7 @@ public class BusinessUser extends BusinessBase {
     }
     public  boolean updateUserByUserID(ModelUser pModelUser)
     {
-            String _Condition = " And UserID = " +pModelUser.getUserId();
+            String _Condition = " UserID = " +pModelUser.getUserId();
             boolean _Result = mSQLiteDALUser.UpdateUser(_Condition, pModelUser);
             return  _Result;
 
@@ -59,6 +60,36 @@ public class BusinessUser extends BusinessBase {
     }
     return  _List;
     }
+
+    public  boolean IsExistUserByUserName(String pUserName, Integer pUserId)
+    {
+        String _Condition = "And UserName = '" +pUserName + "'";
+        if (pUserId != null)
+        {
+            _Condition +="And UserId <>" +pUserId; //表示除了这个pUserId
+        }
+        List _List = mSQLiteDALUser.getUser(_Condition);
+        if(_List.size()> 0)
+            return  true;
+        else
+            return  false;
+    }
+    public  Boolean HideUserByUserID(int pUserID)
+    {
+        String _Condition = "UserID =" +pUserID ;
+        ContentValues _ContentValues = new ContentValues();
+        _ContentValues.put("State", 0 );
+
+        Boolean _Result = mSQLiteDALUser.UpdateUser(_Condition, _ContentValues);
+        if(_Result)
+            return  true;
+        else
+            return  false;
+    }
+
+
+
+
     public  List<ModelUser> getNotHideUser()
     {
         return  mSQLiteDALUser.getUser("And State = 1");

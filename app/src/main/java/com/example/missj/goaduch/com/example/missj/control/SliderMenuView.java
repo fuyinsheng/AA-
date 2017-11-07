@@ -6,7 +6,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.example.missj.goaduch.FrameBase;
+import com.example.missj.goaduch.com.example.missj.fragment.FrameBase;
 import com.example.missj.goaduch.R;
 import com.example.missj.goaduch.com.example.missj.Adapter.AdapterSlideMenu;
 
@@ -47,7 +47,7 @@ public class SliderMenuView {
         layBottomBox.setLayoutParams(_LayoutParams);
         mIsClosed = true;
     }
-    private  void Toggle()
+    public   void Toggle()
     {
         if(mIsClosed)
             open();

@@ -1,14 +1,13 @@
-package com.example.missj.goaduch;
+package com.example.missj.goaduch.com.example.missj.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 
+import com.example.missj.goaduch.R;
 import com.example.missj.goaduch.com.example.missj.Adapter.AdaperAppGrid;
 
 /**

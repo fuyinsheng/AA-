@@ -10,6 +10,30 @@
     <string name="appGridTextCategoryManager">类别管理</string>
     <string name="appGridTextUserManage">人员管理</string>
 
+    <string name="editTvUserHintName">人员名称</string>
+    <string name="DialogTitleUser">%s人员</string>
+
+    <string name="TitleAdd">新建</string>
+    <string name="TitleEdit">修改</string>
+
+    <string name="TipsAddFail">保存失败</string>
+    <string name="TipsAddSucceed">保存成功</string>
+
+    <string name="ButtonSave">保存</string>
+    <string name="ButtonCancle">取消</string>
+    <string name="CheckDataTextChineseEnglishNum">%s 必须是英文中文与数字</string>
+    <string name="CheckDataTextUserExist">该用户以及存在</string>
+
+
+    <string name="MenuTextEdit">修改</string>
+    <string name="MenuTextDelete">删除</string>
+    <string name="TipsDeleteFail">删除失败</string>
+    <string name="DialogTitleDelete">删除提示</string>
+    <string name="DialogMessageUserDelete">你确定要删除%s消费记录吗?</string>
+    <string name="DialogMessageCategoryDelete">你确定要删除%s类别?</string>
+
+    <string name="ButtonTextYes">是</string>
+    <string name="ButtonTextNo">否</string>
 
 
     <string-array name="slidemenu_activity_main">

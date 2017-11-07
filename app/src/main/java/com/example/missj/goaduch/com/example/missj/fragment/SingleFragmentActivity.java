@@ -1,4 +1,4 @@
-package com.example.missj.goaduch;
+package com.example.missj.goaduch.com.example.missj.fragment;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Toast;
+
+import com.example.missj.goaduch.R;
 
 /**
  * Created by miss.j on 2017/10/28.

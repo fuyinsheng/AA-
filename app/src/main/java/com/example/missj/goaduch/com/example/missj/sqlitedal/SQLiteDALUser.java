@@ -47,6 +47,11 @@ public  boolean UpdateUser(String pConditionn,ModelUser pModelUser)
     ContentValues _ContentValues = createParms(pModelUser);
     return  getSQLiteDatabase().update(getTableNameAndPK()[0], _ContentValues, pConditionn,null)> 0;
 }
+    public  boolean UpdateUser(String pConditionn,ContentValues pContentValues)
+    {
+      //  ContentValues _ContentValues = createParms(pModelUser);
+        return  getSQLiteDatabase().update(getTableNameAndPK()[0], pContentValues, pConditionn,null)> 0;
+    }
     public List<ModelUser> getUser(String pCondition)
     {
         String _SqlText = "Select * From User Where 1=1 "+pCondition;

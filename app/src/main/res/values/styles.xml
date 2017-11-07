@@ -13,4 +13,10 @@
         <item name="android:divider">@mipmap/divider</item>
 <!--       <item name="android:cacheColorHint">"@color/transparent</item>-->
     </style>
+    <style name="StyleListViewItem">
+        <item name="android:textSize">40px</item>
+        <item name="android:textColor">#ff000000</item>
+
+        <!--       <item name="android:cacheColorHint">"@color/transparent</item>-->
+    </style>
 </resources>
